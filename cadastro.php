@@ -5,9 +5,20 @@ include_once('config.php');
 
         $nome=  $_POST['nome'];
         $senha= $_POST['senha'];
+        $email= $_POST['email'];
         
-        $result = mysqli_query($conexao, "INSERT INTO usuario(nome,senha)
-        VALUES ('$nome','$senha')");
+       
+        $sql = "SELECT * FROM usuario WHERE email = '$email'";
+        $resultado = mysqli_query($conexao, $sql);
+        if (mysqli_num_rows($resultado) > 0) {
+            echo "O valor já existe na coluna unique.";
+          } else {
+            echo "O valor não existe na coluna unique.";
+          }
+        
+        
+        $result = mysqli_query($conexao, "INSERT INTO usuario(nome,senha,email)
+        VALUES ('$nome','$senha','$email')");
     
 }
 
@@ -55,10 +66,16 @@ include_once('config.php');
             <div class= "inputbox">
                  <h1>CADASTRO</h1>
                 <input type="text" name="nome" id='inputuser' require>
-                <label for="nome" class="laberInput">Usuario</label><br><br>
+                <label for="nome" class="laberInput">Nome</label><br><br>
+               
                 <input type="password" name="senha" id='inputuser' require>
-                <label for="senha">senha</label><br><br>
+                <label for="senha">Senha</label><br><br>
+                
+                <input type="email" name= "email" id="inputEmail" require>
+                <label for="email">Email</label><br><br>
+                
                 <input class= "inputbtt" type="submit" name= "submit" value = "enviar"> 
+                
             </div>
             <a href="home.php">Voltar</a>
 
