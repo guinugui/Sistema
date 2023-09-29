@@ -1,30 +1,29 @@
-<?php 
-    if(isset($_POST['submit']))
-    {
-      //  print_r('Nome: ' . $_POST['nome']);
-       // print_r('<br>');
-       // print_r('marca: ' . $_POST['marca']);
-       //  print_r('<br>');
-       //  print_r('classe: ' . $_POST['classe']);
-      //   print_r('<br>');
-       
-       
-       
-       include_once('config.php');
+<?php
+if (isset($_POST['submit'])) {
+    //  print_r('Nome: ' . $_POST['nome']);
+    // print_r('<br>');
+    // print_r('marca: ' . $_POST['marca']);
+    //  print_r('<br>');
+    //  print_r('classe: ' . $_POST['classe']);
+    //   print_r('<br>');
 
-       $nome = $_POST['nome'];
-       $marca = $_POST['marca'];
-       $classe = $_POST['classe'];
 
-            $sql= "INSERT INTO produto(nome,marca,classe)
+
+    include_once('config.php');
+
+    $nome = $_POST['nome'];
+    $marca = $_POST['marca'];
+    $classe = $_POST['classe'];
+
+    $sql = "INSERT INTO produto(nome,marca,classe)
             VALUES('$nome','$marca','$classe')";
 
-            $result = $conexao->query($sql);
+    $result = $conexao->query($sql);
 
 
 
 
-    }
+}
 
 
 
