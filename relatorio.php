@@ -25,31 +25,32 @@ $result = $conexao->query($sql);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>Produtos documentados</title>
 </head>
 <style>
-    body {
-        font-family: Arial, Helvetica, sans-serif;
-        background-image: linear-gradient(to right, rgb(100, 1, 22), rgb(7, 54, 10));
-        color: white;
-    }
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(to right, rgb(100, 1, 22), rgb(7, 54, 10));
+    color: white;
+}
 
-    h1 {
-        text-align: center;
-    }
+h1 {
+    text-align: center;
+}
 
-    .table-bg {
-        background: rgba(0, 0, 0, 0.3);
-        border-radius: 15px 15px 0 0;
-    }
+.table-bg {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 15px 15px 0 0;
+}
 
-    .return {
-        text-align: end;
-        background: rgba(0, 0, 0, 0.3);
-        padding: 10px;
+.return {
+    text-align: end;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 10px;
 
-    }
+}
 </style>
 
 <body>

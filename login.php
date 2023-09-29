@@ -7,26 +7,26 @@
     <title>Login</title>
 </head>
 <style>
-    body {
-        background-image: linear-gradient(to right, rgb(200, 62, 2), rgb(5, 655, 1));
-    }
+body {
+    background-image: linear-gradient(to right, rgb(200, 62, 2), rgb(5, 655, 1));
+}
 
-    .box {
+.box {
 
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 
-    .h1 {
-        color: red;
-        text-align: center;
-    }
+.h1 {
+    color: red;
+    text-align: center;
+}
 
-    .inputAcesse {
-        position: relative;
-    }
+.inputAcesse {
+    position: relative;
+}
 </style>
 
 <body>
@@ -47,6 +47,7 @@
                     <input type="submit" name="submit" value="Acessar">
             </fieldset>
         </form>
+        <a href="home.php">Voltar</a>
     </div>
 </body>
 
