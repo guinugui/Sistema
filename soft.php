@@ -1,3 +1,15 @@
+<?php 
+session_start();
+include_once('config.php');
+if((!isset($_SESSION['nome'])== true)and (!isset($_SESSION['senha'])== true))
+    {
+        unset($_SESSION['nome']);
+        unset($_SESSION['senha']);
+        header('Location: login.php');
+    }
+
+$logado = $_SESSION['nome'];
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,13 +45,25 @@
     a:hover{
         background-color: dodgerblue;
     }
+    h2{
+        text-align: center;
+    }
+    .d-flex{
+        text-align: end;
+    }
 </style>
 <body>
 <h1>SISTEMA SOFT</h1>
+    
+    <?php echo " <h2> Usuario: <u>$logado</u></h2>";?>
+    
     <div class="box">
         
         <a href="formProdut.php">Cadastra Produto</a><br><br>
         <a href="relatorio.php">Relatorio de Produto</a>
+    </div>
+    <div class="d-flex">
+        <a href="sair.php" class="btn btn-danger">sair</a>
     </div>
     
 </body>
